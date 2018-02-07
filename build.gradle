@@ -1,0 +1,26 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+
+group = 'lansforsakringar.api'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    compile group: 'commons-codec', name: 'commons-codec', version: '1.7'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'org.springframework', name: 'spring-web', version:'3.2.4.RELEASE'
+    compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version:'1.9.13'
+
+
+}
+test {
+    outputs.upToDateWhen { false }
+}
